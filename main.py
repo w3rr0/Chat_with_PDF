@@ -1,7 +1,3 @@
-# www.youtube.com/@PythonCodeCampOrg
-
-""" Subscribe to PYTHON CODE CAMP or I'll eat all your cookies... """
-
 import torch
 from langchain_community.document_loaders import CSVLoader, PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
