@@ -3,18 +3,18 @@
 """ Subscribe to PYTHON CODE CAMP or I'll eat all your cookies... """
 
 import torch
-from langchain.document_loaders import CSVLoader, PyPDFLoader
+from langchain_community.document_loaders import CSVLoader, PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.embeddings import HuggingFaceEmbeddings
-from langchain.vectorstores import Chroma
-from langchain.llms import LlamaCpp
+from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain_community.llms import LlamaCpp
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-loader = PyPDFLoader(file_path=r".\Sachin.pdf")
+loader = PyPDFLoader(file_path=r"./Sachin.pdf")
 data = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=200)
