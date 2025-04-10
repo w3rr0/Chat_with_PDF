@@ -32,7 +32,7 @@ llm_answer_gen = LlamaCpp(
 )
 
 # Create vector database for answer generation
-embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={"device": device})
+embeddings = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2", model_kwargs={"device": device}, show_progress=True)
 
 # Initialize vector store for answer generation
 vector_store = Chroma.from_documents(text_chunks, embeddings)
