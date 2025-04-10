@@ -10,7 +10,7 @@ from langchain.chains import ConversationalRetrievalChain
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-loader = PyPDFLoader(file_path=r"./Sachin.pdf")
+loader = PyPDFLoader(file_path=r"./IAESTE_info.pdf")
 data = loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=10000, chunk_overlap=200)
